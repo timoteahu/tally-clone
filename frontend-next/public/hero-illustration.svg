@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="400" cy="300" r="250" fill="url(#gradient1)" fill-opacity="0.1"/>
+  
+  <!-- Calendar -->
+  <rect x="200" y="150" width="400" height="300" rx="20" fill="white" stroke="url(#gradient2)" stroke-width="2"/>
+  <rect x="200" y="150" width="400" height="60" rx="20" fill="url(#gradient2)"/>
+  <text x="400" y="190" font-family="Arial" font-size="24" fill="white" text-anchor="middle">March 2024</text>
+  
+  <!-- Calendar Grid -->
+  <g fill="none" stroke="#E5E7EB" stroke-width="1">
+    <!-- Vertical lines -->
+    <line x1="285.7" y1="210" x2="285.7" y2="450"/>
+    <line x1="371.4" y1="210" x2="371.4" y2="450"/>
+    <line x1="457.1" y1="210" x2="457.1" y2="450"/>
+    <line x1="542.8" y1="210" x2="542.8" y2="450"/>
+    
+    <!-- Horizontal lines -->
+    <line x1="200" y1="270" x2="600" y2="270"/>
+    <line x1="200" y1="330" x2="600" y2="330"/>
+    <line x1="200" y1="390" x2="600" y2="390"/>
+  </g>
+  
+  <!-- Checked days -->
+  <g fill="url(#gradient2)">
+    <circle cx="242.8" cy="240" r="15"/>
+    <circle cx="328.5" cy="240" r="15"/>
+    <circle cx="414.2" cy="240" r="15"/>
+    <circle cx="500" cy="240" r="15"/>
+    <circle cx="242.8" cy="300" r="15"/>
+    <circle cx="328.5" cy="300" r="15"/>
+    <circle cx="414.2" cy="300" r="15"/>
+    <circle cx="500" cy="300" r="15"/>
+    <circle cx="242.8" cy="360" r="15"/>
+    <circle cx="328.5" cy="360" r="15"/>
+    <circle cx="414.2" cy="360" r="15"/>
+    <circle cx="500" cy="360" r="15"/>
+    <circle cx="242.8" cy="420" r="15"/>
+    <circle cx="328.5" cy="420" r="15"/>
+    <circle cx="414.2" cy="420" r="15"/>
+  </g>
+  
+  <!-- Check marks -->
+  <g stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M232.8 240L242.8 250L252.8 230"/>
+    <path d="M318.5 240L328.5 250L338.5 230"/>
+    <path d="M404.2 240L414.2 250L424.2 230"/>
+    <path d="M490 240L500 250L510 230"/>
+    <path d="M232.8 300L242.8 310L252.8 290"/>
+    <path d="M318.5 300L328.5 310L338.5 290"/>
+    <path d="M404.2 300L414.2 310L424.2 290"/>
+    <path d="M490 300L500 310L510 290"/>
+    <path d="M232.8 360L242.8 370L252.8 350"/>
+    <path d="M318.5 360L328.5 370L338.5 350"/>
+    <path d="M404.2 360L414.2 370L424.2 350"/>
+    <path d="M490 360L500 370L510 350"/>
+    <path d="M232.8 420L242.8 430L252.8 410"/>
+    <path d="M318.5 420L328.5 430L338.5 410"/>
+    <path d="M404.2 420L414.2 430L424.2 410"/>
+  </g>
+  
+  <!-- Person -->
+  <g transform="translate(600, 300)">
+    <!-- Head -->
+    <circle cx="0" cy="-50" r="30" fill="#FFD1DC"/>
+    
+    <!-- Body -->
+    <path d="M0 -20 L0 50" stroke="#4A90E2" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Arms -->
+    <path d="M0 0 L-30 20" stroke="#4A90E2" stroke-width="8" stroke-linecap="round"/>
+    <path d="M0 0 L30 20" stroke="#4A90E2" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Legs -->
+    <path d="M0 50 L-20 80" stroke="#4A90E2" stroke-width="8" stroke-linecap="round"/>
+    <path d="M0 50 L20 80" stroke="#4A90E2" stroke-width="8" stroke-linecap="round"/>
+    
+    <!-- Check mark above head -->
+    <path d="M-15 -80 L0 -65 L15 -80" stroke="#9013FE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Gradients -->
+  <defs>
+    <linearGradient id="gradient1" x1="0" y1="0" x2="800" y2="600">
+      <stop offset="0%" stop-color="#4A90E2"/>
+      <stop offset="50%" stop-color="#9013FE"/>
+      <stop offset="100%" stop-color="#FF2D95"/>
+    </linearGradient>
+    <linearGradient id="gradient2" x1="0" y1="0" x2="400" y2="0">
+      <stop offset="0%" stop-color="#4A90E2"/>
+      <stop offset="100%" stop-color="#9013FE"/>
+    </linearGradient>
+  </defs>
+</svg> 

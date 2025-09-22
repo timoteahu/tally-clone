@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "apply",
+          "variants",
+          "responsive",
+          "screen",
+          "layer"
+        ]
+      }
+    ],
+    "property-no-unknown": [
+      true,
+      {
+        "ignoreProperties": [
+          "user-drag",
+          "-webkit-user-drag",
+          "-moz-user-drag",
+          "-o-user-drag",
+          "-khtml-user-drag"
+        ]
+      }
+    ],
+    "no-descending-specificity": null,
+    "keyframes-name-pattern": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "shorthand-property-no-redundant-values": null
+  }
+} 

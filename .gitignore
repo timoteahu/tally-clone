@@ -1,0 +1,108 @@
+.env
+/venv
+node_modules
+joy_thief.xcworkspace
+backend/venv
+.venv/
+frontend-next/.next/
+.next/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Environments
+.env
+.env.*
+*.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.env.local
+.env.development
+.env.test
+.env.production
+.env.staging
+
+# macOS
+.DS_Store
+
+# Xcode
+xcuserdata/
+*.xcworkspace/
+!default.xcworkspace
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+# Project-specific sensitive files
+frontend-next/.next/
+joy_thief/joy_thief/AppConfig.swift
+backend/app/AuthKey_*.p8
+*.p8
+
+# Temporary files
+nohup.out
+*.log
+*.tmp
+
+# IDE specific files
+.idea/
+.vscode/
+.cursor/
+*.swp
+*.swo
+*~
+
+# OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Virtual environments (additional patterns)
+/venv/
+backend/venv/
+*/venv/
