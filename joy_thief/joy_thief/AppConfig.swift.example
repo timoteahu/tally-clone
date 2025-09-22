@@ -1,0 +1,58 @@
+import Foundation
+
+struct AppConfig {
+    // MARK: - Network Configuration
+    // Replace with your backend URL (e.g., your Heroku app URL or local ngrok URL)
+    static let baseURL = "https://my-backend-fe2a0c7ff899.herokuapp.com/api"
+    
+    // Replace with your Stripe publishable key from https://dashboard.stripe.com/apikeys
+    static let stripePublishableKey = "pk_test_XXXXXXXXXXXXXXXXXXXXXXXX"  // Replace with your actual key
+    
+    // MARK: - Branch.io Configuration
+    static let branchKey: String = {
+        // Try to read from Info.plist first
+        if let path = Bundle.main.path(forResource: "Info", ofType: "plist"),
+           let plist = NSDictionary(contentsOfFile: path),
+           let key = plist["branch_key"] as? String {
+            print("🔑 [AppConfig] Using Branch key from Info.plist")
+            return key
+        } else {
+            // Fallback to hardcoded key - replace with your Branch.io key
+            let fallbackKey = "key_test_XXXXXXXXXXXXXXXXXXXXXXXX"  // Replace with your actual key
+            print("⚠️ [AppConfig] Using fallback Branch key")
+            return fallbackKey
+        }
+    }()
+    
+    // MARK: - Debug Helpers
+    static func printConfiguration() {
+        print("🔧 [AppConfig] Configuration Summary:")
+        print("🔧 [AppConfig] - Base URL: \(baseURL)")
+        print("🔧 [AppConfig] - Branch Key: \(branchKey.prefix(20))...")
+        print("🔧 [AppConfig] - Stripe Key: \(stripePublishableKey.prefix(20))...")
+        
+        // Test connectivity
+        Task {
+            await testConnectivity()
+        }
+    }
+    
+    // MARK: - Connectivity Testing
+    static func testConnectivity() async {
+        guard let url = URL(string: baseURL.replacingOccurrences(of: "/api", with: "")) else {
+            print("❌ [AppConfig] Invalid base URL: \(baseURL)")
+            return
+        }
+        
+        do {
+            print("🌐 [AppConfig] Testing connectivity to: \(url)")
+            let (_, response) = try await URLSession.shared.data(from: url)
+            if let httpResponse = response as? HTTPURLResponse {
+                print("✅ [AppConfig] Server reachable - Status: \(httpResponse.statusCode)")
+            }
+        } catch {
+            print("❌ [AppConfig] Server unreachable: \(error.localizedDescription)")
+            print("💡 [AppConfig] Check if backend server is running and ngrok URL is current")
+        }
+    }
+}

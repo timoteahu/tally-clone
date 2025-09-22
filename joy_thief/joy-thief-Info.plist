@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.joyThief.cacheupdates</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>tally.test</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>tally</string>
+			</array>
+		</dict>
+	</array>
+	<key>FamilyControls</key>
+	<dict>
+		<key>DeviceActivityMonitorExtension</key>
+		<string>com.yourapp.deviceactivity.monitor</string>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>EBGaramond-Regular.ttf</string>
+		<string>EBGaramond-Italic.ttf</string>
+		<string>CalSans-Regular.ttf</string>
+		<string>Lato-Regular.ttf</string>
+		<string>DMSans.ttf</string>
+	</array>
+	<key>UIApplicationSceneManifest</key>
+	<dict>
+		<key>UIApplicationSupportsMultipleScenes</key>
+		<false/>
+		<key>UISceneConfigurations</key>
+		<dict/>
+	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+		<string>processing</string>
+	</array>
+	<key>branch_key</key>
+	<string>key_live_bqscfn76qct95q1to7St2plcArgNpoEZ</string>
+	<key>branch_universal_link_domains</key>
+	<array>
+		<string>jointally.app.link</string>
+		<string>jointally-alternate.app.link</string>
+		<string>n0kww.test-app.link</string>
+	</array>
+</dict>
+</plist>
